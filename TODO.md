@@ -223,6 +223,12 @@
 - 未运行：复制/下载权限、窄屏响应式和完整 UI 验收；未运行测试（仓库没有 test script）。
 - 能力边界：关键词规则可能漏判；草稿为模板整理结果，用户需核对；当前无网络模型调用。
 
+### 2026-10-19（部署与手机验收）
+- 本轮：增加 `npm run build`；静态构建成功。提交 `facfc6a` 已推送至 GitHub 私有仓库 `codenow-starter`。
+- 验证：`npm run lint`、`npm run typecheck`、`npm run build` 通过；通过 Chrome DevTools 手机模拟 375×812 走通首页 → 本地主题梳理 → 讨论稿，三个页面 `scrollWidth` 均为 375px。截图见 `test-results/` 和 `TESTING_CHECKLIST.md`。
+- 未运行：`npm run test`（仓库未提供该 script）；未测试真实手机与 Vercel 线上地址。
+- 阻塞：Vercel 集成未连接，Vercel 登录页还需要 GitHub 身份验证；连接完成后继续部署并从真实手机打开 `.vercel.app` 地址。AI Key 步骤按当前无 AI 调用的实现跳过。
+
 ## TODO 卸货记录
 
 > 每次将已完成块从 §2 归档到 `prd/` 时追加；规范见 `.codex/rules/todo-prd-archive.md`。
