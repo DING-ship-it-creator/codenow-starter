@@ -229,6 +229,12 @@
 - 未运行：`npm run test`（仓库未提供该 script）；未测试真实手机与 Vercel 线上地址。
 - 阻塞：Vercel 集成未连接，Vercel 登录页还需要 GitHub 身份验证；连接完成后继续部署并从真实手机打开 `.vercel.app` 地址。AI Key 步骤按当前无 AI 调用的实现跳过。
 
+### 2026-10-19（GitHub Pages 发布）
+- [x] 用户已公开 `DING-ship-it-creator/codenow-starter` 仓库以启用免费 Pages。
+- [x] 配置 Next.js 静态导出、仓库子路径和目录路由，新增 Pages 自动部署工作流。
+- [ ] 验收：Pages 构建与发布成功；公网首页、澄清和结果路由可访问；375px 手机视口走通输入到讨论稿，刷新不出现 404。
+- 进度：正在构建并启用 Pages；`.env.local` 保持忽略，构建与上传不需要 API Key。
+
 ## TODO 卸货记录
 
 > 每次将已完成块从 §2 归档到 `prd/` 时追加；规范见 `.codex/rules/todo-prd-archive.md`。
