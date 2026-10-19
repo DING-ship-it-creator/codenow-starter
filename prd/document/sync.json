@@ -1,0 +1,7 @@
+{
+  "lastPrdSyncCommit": "ab57e018f4774d70e5e3d2ce4e9855bbafe0ddea",
+  "lastPrdSyncAt": "2026-10-19",
+  "module": "document",
+  "lastChangedFiles": ["app/result/page.tsx", "lib/local-assistant.ts", "lib/types.ts"],
+  "notes": "由浏览器本地固定模板生成 Markdown 讨论稿；编辑和导出仍待浏览器端到端验收。"
+}

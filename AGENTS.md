@@ -7,11 +7,14 @@
 开始工作前请按需读取：
 
 - `TODO.md`
+- `prd/README.md` 与当前任务对应的 `prd/` 模块文档
 - `.codex/rules/coach.md`（教学、解释或排错时）
 - `.codex/rules/todo-writeback.md`（会修改仓库时）
 - `.codex/rules/todo-prd-archive.md`（TODO 过长、已完成模块需要归档到 `prd/` 时）
 
 本地 Skills 位于 `.codex/skills/<skill-name>/SKILL.md`。用户明确点名某个 Skill，或任务明显符合其说明时，先读取该 Skill；必要的参考资料只按 Skill 中的路由读取。
+
+`prd/` 描述当前代码事实，`TODO.md` 是后续开发入口。根目录 `prd.original.md` 仅供人类回顾，不得作为开发依据。
 
 `.codex/agents/*.toml` 是 Codex 自动发现的项目级 Agent Profile，说明见 `.codex/agents/README.md`。当用户明确要求多 Agent，或适用 Skill 明确要求委派时，优先按角色边界委派可独立完成的专项任务；如果当前客户端未加载某个 Profile，主会话按同样的职责清单完成工作，不能因此跳过验收、架构或安全审查。
 
@@ -31,3 +34,13 @@
 - 涉及 API 调用、IPC 调用、第三方服务请求或降级逻辑时，必须增加必要的调用日志，至少覆盖调用入口、关键参数摘要、成功/失败结果和错误原因，方便本地调试与问题定位。
 - 日志不得输出 API Key、Token、用户隐私原文等敏感信息；需要记录时只保留脱敏后的摘要。
 - 复杂逻辑和关键代码请补充中文注释，注释应解释“为什么这样做”和调试观察点，避免只重复代码表面含义。
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

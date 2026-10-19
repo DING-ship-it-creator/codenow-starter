@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --color-canvas: #f2f1ee; --color-surface: #fbfaf7; --color-foreground: #1d1d1b;
+  --color-muted-foreground: #686762; --color-border: #d9d7d1; --color-primary: #20201e;
+  --color-accent-teal: #2e9d96; --color-accent-blue: #6c8fd7; --color-accent-pink: #d98aa4;
+  --color-accent-amber: #d8a14a; --color-danger: #b6423b; --radius-control: 2px;
+  --shadow-card: 0 3px 12px rgb(20 20 20 / 6%);
+}
+* { box-sizing: border-box; }
+html { background: var(--color-canvas); }
+body { margin: 0; background: var(--color-canvas); color: var(--color-foreground); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid rgb(46 157 150 / 40%); outline-offset: 2px; }
+::selection { background: rgb(46 157 150 / 20%); }

@@ -1,0 +1,7 @@
+{
+  "lastPrdSyncCommit": "ab57e018f4774d70e5e3d2ce4e9855bbafe0ddea",
+  "lastPrdSyncAt": "2026-10-19",
+  "module": "intake",
+  "lastChangedFiles": ["app/page.tsx", "components/workflow-provider.tsx", "lib/types.ts"],
+  "notes": "首次全量扫描；本次实现尚未提交，能力状态为部分实现。"
+}

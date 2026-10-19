@@ -1,0 +1,7 @@
+{
+  "lastPrdSyncCommit": "ab57e018f4774d70e5e3d2ce4e9855bbafe0ddea",
+  "lastPrdSyncAt": "2026-10-19",
+  "mode": "migration",
+  "modulesUpdated": ["intake", "clarification", "document"],
+  "notes": "首次全量扫描；同步包含本轮未提交代码观察。根目录 prd.md 已归档为 prd.original.md。"
+}

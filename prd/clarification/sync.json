@@ -1,0 +1,7 @@
+{
+  "lastPrdSyncCommit": "ab57e018f4774d70e5e3d2ce4e9855bbafe0ddea",
+  "lastPrdSyncAt": "2026-10-19",
+  "module": "clarification",
+  "lastChangedFiles": ["app/clarify/page.tsx", "lib/local-assistant.ts", "components/workflow-provider.tsx"],
+  "notes": "已改为浏览器本地固定主题引导；不调用 AI 或外部 API。关键词规则需要用户核对。"
+}
