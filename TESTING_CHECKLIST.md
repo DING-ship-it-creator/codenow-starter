@@ -15,8 +15,16 @@
 - [x] 信息保留为浏览器本地内容，不调用 AI 服务或外部 API。
 - 证据：`test-results/home-375-mobile.png`、`test-results/clarify-375-mobile.png`、`test-results/result-375-mobile.png`。
 
-## Vercel 线上验收
+## GitHub Pages 线上验收（2026-10-19）
 
-- [ ] Vercel 集成尚未连接；连接并授权后部署当前 GitHub 私有仓库。
-- [ ] 获取 `.vercel.app` 地址后，从手机网络打开并走完首页 → 主题梳理 → 讨论稿流程。
-- [ ] 如线上出现空白页或 404，检查 Vercel deployment logs / Console 后修复并重新部署。
+地址：https://ding-ship-it-creator.github.io/codenow-starter/
+
+- [x] 公开仓库并启用 GitHub Actions 发布来源，Pages 构建与发布成功。
+- [x] 375×812 浏览器视口走通首页 → 本地主题梳理 → MVP 讨论稿。
+- [x] 三个页面均无横向溢出，澄清和结果页 `scrollWidth` 均为 375px。
+- [x] 直接刷新 `/codenow-starter/result/` 返回正常页面，草稿从当前会话恢复。
+- [x] 下载 Markdown 成功；清除测试会话后回到首页。
+- [x] 本地静态导出、lint 和 typecheck 通过；没有 test script。
+- [ ] 真实手机硬件、蜂窝网络和微信内置浏览器需由用户实际打开链接确认。
+- 首次发布证据：[GitHub Actions 成功记录](https://github.com/DING-ship-it-creator/codenow-starter/actions/runs/39220747512)。手机视口截图保存在本次 Codex 部署任务的输出中。
+- 部署改用 GitHub Pages，原 Vercel 待办由本次发布替代。

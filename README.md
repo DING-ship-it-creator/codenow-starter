@@ -2,6 +2,14 @@
 
 把重复工作讲清楚，整理成可落地的 MVP 方案。应用提供痛点录入、固定主题引导、讨论稿整理与 Markdown 编辑导出。当前版本不调用 AI，全部在浏览器本地完成，不需要 API Key。
 
+在线使用：[打开小工序](https://ding-ship-it-creator.github.io/codenow-starter/)。支持手机浏览器，无需登录。
+
+## 发布
+
+推送到 `main` 后，`.github/workflows/pages.yml` 自动构建静态文件并发布到 GitHub Pages。仓库 Settings → Pages 的发布来源为 GitHub Actions。`next.config.ts` 在 `GITHUB_PAGES=true` 时使用 `/codenow-starter` 子路径；`trailingSlash` 确保子页面可以直接打开和刷新。
+
+本地生成相同的静态产物：`GITHUB_PAGES=true npm run build`，输出目录为 `out/`。不需要服务器或 API Key。
+
 ## 运行
 
 需要 Node.js 20.19+ 或 22.13+。当前环境为 Node.js 22.11.0，Next.js 可启动，但 ESLint 的一个传递依赖声明需要更新 Node 补丁版本。

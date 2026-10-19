@@ -232,8 +232,12 @@
 ### 2026-10-19（GitHub Pages 发布）
 - [x] 用户已公开 `DING-ship-it-creator/codenow-starter` 仓库以启用免费 Pages。
 - [x] 配置 Next.js 静态导出、仓库子路径和目录路由，新增 Pages 自动部署工作流。
-- [ ] 验收：Pages 构建与发布成功；公网首页、澄清和结果路由可访问；375px 手机视口走通输入到讨论稿，刷新不出现 404。
-- 进度：正在构建并启用 Pages；`.env.local` 保持忽略，构建与上传不需要 API Key。
+- [x] 验收：Pages 构建与发布成功；公网首页、澄清和结果路由可访问；375px 手机视口走通输入到讨论稿，结果页刷新不出现 404，Markdown 下载成功。
+- 地址：https://ding-ship-it-creator.github.io/codenow-starter/ 。首次部署提交 `b88adc2`，Actions 构建和发布耗时 53 秒。
+- 本轮检查：`npm run lint`、`npm run typecheck`、`GITHUB_PAGES=true npm run build` 通过；`npm run test` 未提供 script，建议后续补齐核心规则单元测试。
+- 手机验收：375×812 浏览器视口，三个页面无横向溢出；确认返回首页并清除测试会话。真实手机硬件和蜂窝网络仍需用户实际打开链接确认。
+- 手机排版：调整首页标题最小字号，避免 375px 下末尾孤字换行；说明文字与字数计数保持间距。
+- `.env.local` 保持忽略，不进入仓库或站点；构建与上传不需要 API Key。Vercel 部署路线由本次 GitHub Pages 发布替代。
 
 ## TODO 卸货记录
 

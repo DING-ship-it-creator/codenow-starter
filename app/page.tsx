@@ -28,12 +28,12 @@ export default function HomePage() {
     <StepLabel step="01" title="说说你的工作"/>
     <div className="grid gap-12 lg:grid-cols-[1fr_280px] lg:gap-16">
       <div><div className="mb-8 inline-flex items-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-xs"><Sparkles size={14} className="text-[var(--color-accent-teal)]"/>从日常语言开始，不需要懂产品或技术</div>
-        <h1 className="max-w-[650px] text-[clamp(36px,6vw,58px)] font-medium leading-[1.13] tracking-[-.055em]">把重复工作讲清楚，<br/><span className="text-[var(--color-muted-foreground)]">整理成可落地的方案。</span></h1>
+        <h1 className="max-w-[650px] text-[clamp(32px,6vw,58px)] font-medium leading-[1.13] tracking-[-.055em]">把重复工作讲清楚，<br/><span className="text-[var(--color-muted-foreground)]">整理成可落地的方案。</span></h1>
         <p className="mt-5 max-w-[560px] text-[15px] leading-7 text-[var(--color-muted-foreground)]">描述一件耗时或重复的事。小工序会按固定主题提示你补齐信息，再整理成可编辑的 MVP 讨论稿。</p>
         <div className="mt-9 border border-[var(--color-border)] bg-[var(--color-surface)] p-4 md:p-5">
           <label htmlFor="pain-point" className="mb-3 block text-sm font-medium">最近哪件工作最想省点时间？</label>
           <textarea id="pain-point" data-testid="pain-point-input" value={description} onChange={e => { setDescription(e.target.value); setError(""); }} maxLength={4000} rows={6} placeholder="比如：每周一，我要把三份表格里的活动数据复制到一起，再手动算出各渠道的报名数……" className="w-full resize-y border border-[var(--color-border)] bg-white px-4 py-3 text-sm leading-6 placeholder:text-[#9a9891]"/>
-          <div className="mt-2 flex justify-between text-xs text-[var(--color-muted-foreground)]"><span>可以写写现在怎么做、多久一次、希望得到什么结果</span><span>{description.length}/4000</span></div>
+          <div className="mt-2 flex justify-between gap-3 text-xs text-[var(--color-muted-foreground)]"><span>可以写写现在怎么做、多久一次、希望得到什么结果</span><span className="shrink-0 tabular-nums">{description.length}/4000</span></div>
           <button type="button" aria-expanded={expanded} onClick={() => setExpanded(!expanded)} className="mt-5 inline-flex min-h-10 items-center gap-2 text-sm font-medium"><ChevronDown size={16} className={`transition-transform ${expanded ? "rotate-180" : ""}`}/>补充一点背景 <span className="font-normal text-[var(--color-muted-foreground)]">（可选）</span></button>
           {expanded && <div className="mt-3 grid gap-3 sm:grid-cols-2">{([["currentProcess","目前是怎么做的？"],["frequency","多久做一次？"],["people","会涉及哪些人？"],["desiredOutcome","理想结果是什么？"]] as const).map(([key,label])=><label key={key} className="text-xs font-medium">{label}<input value={extra[key]} onChange={e=>setExtra({...extra,[key]:e.target.value})} className="mt-2 min-h-11 w-full border border-[var(--color-border)] bg-white px-3 text-sm font-normal"/></label>)}</div>}
           {error && <p role="alert" className="mt-3 text-sm text-[var(--color-danger)]">{error}</p>}
